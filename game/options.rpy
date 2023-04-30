@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("infection_in_hospital")
+define config.name = _("院感危机：回溯")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -28,6 +28,7 @@ define config.version = "1.0"
 ## 行。
 
 define gui.about = _p("""
+--- 由院感退退队制作 ---
 """)
 
 

@@ -21,32 +21,32 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#99ccff'
+define gui.accent_color = '#000060'
 
 ## 当文本按钮既未被选中也未被悬停时使用的颜色。
-define gui.idle_color = '#888888'
+define gui.idle_color = '#606060'
 
 ## 小的颜色用于小的文本，需要更亮/更暗才能达到同样的效果。
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = '#404040'
 
 ## 当按钮和滑条被悬停时使用的颜色。
-define gui.hover_color = '#c1e0ff'
+define gui.hover_color = '#3284d6'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#555555'
 
 ## 当文本按钮无法被选择时使用的颜色。
 define gui.insensitive_color = '#8888887f'
 
 ## 滑条未填充的部分使用的颜色。这些颜色不直接使用，但在重新生成条形图像文件时使
 ## 用。
-define gui.muted_color = '#3d5166'
-define gui.hover_muted_color = '#5b7a99'
+define gui.muted_color = '#6080d0'
+define gui.hover_muted_color = '#8080f0'
 
 ## 对话和菜单选择文本使用的颜色。
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = '#402000'
+define gui.interface_text_color = '#404040'
 
 
 ## 字体和字体大小 #####################################################################
@@ -61,16 +61,16 @@ define gui.name_text_font = "SourceHanSansLite.ttf"
 define gui.interface_text_font = "SourceHanSansLite.ttf"
 
 ## 普通对话文本的大小。
-define gui.text_size = 33
+define gui.text_size = 30
 
 ## 角色名称的大小。
 define gui.name_text_size = 45
 
 ## 游戏用户界面中文本的大小。
-define gui.interface_text_size = 33
+define gui.interface_text_size = 36
 
 ## 游戏用户界面中标签的大小。
-define gui.label_text_size = 36
+define gui.label_text_size = 45
 
 ## 通知屏幕上文本的大小。
 define gui.notify_text_size = 24
@@ -100,7 +100,7 @@ define gui.textbox_yalign = 1.0
 ## 叙述角色名字相对于文本框的位置。可以是从左侧或顶部起的整数像素，或设为 0.5 来
 ## 居中。
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -22
 
 ## 角色名字的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
 define gui.name_xalign = 0.0
@@ -110,10 +110,10 @@ define gui.namebox_width = None
 define gui.namebox_height = None
 
 ## 包含角色名字的方框的边界尺寸，以左、上、右、下顺序排列。
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(15, 7, 15, 7)
 
 ## 若为 True，则名字框的背景将平铺；若为 False，则名字框的背景将缩放。
-define gui.namebox_tile = False
+define gui.namebox_tile = True
 
 
 ## 对话相对于文本框的位置。可以是相对于文本框从左侧或顶部起的整数像素，或设为
@@ -263,7 +263,7 @@ define gui.main_menu_text_xalign = 1.0
 ## 这些变量控制在不存在覆盖层或窗口时可以包含用户界面组件的框架的外观。
 
 ## 通用框架。
-define gui.frame_borders = Borders(6, 6, 6, 6)
+define gui.frame_borders = Borders(15, 15, 15, 15)
 
 ## 用作确认界面部分的框架。
 define gui.confirm_frame_borders = Borders(60, 60, 60, 60)
@@ -275,7 +275,7 @@ define gui.skip_frame_borders = Borders(24, 8, 75, 8)
 define gui.notify_frame_borders = Borders(24, 8, 60, 8)
 
 ## 框架背景是否应平铺？
-define gui.frame_tile = False
+define gui.frame_tile = True
 
 
 ## 条，滚动条和滑块 ####################################################################
@@ -287,10 +287,10 @@ define gui.frame_tile = False
 ## 水平条，滚动条和滑块的高度。垂直条，滚动条和滑块的宽度。
 define gui.bar_size = 38
 define gui.scrollbar_size = 18
-define gui.slider_size = 38
+define gui.slider_size = 64
 
 ## 若为 True，则条的底图平铺。若为 False，则条的底图线性缩放。
-define gui.bar_tile = False
+define gui.bar_tile = True
 define gui.scrollbar_tile = False
 define gui.slider_tile = False
 
@@ -319,16 +319,16 @@ define config.history_length = 250
 define gui.history_height = 210
 
 ## 所指定叙述角色的标签的坐标、宽度和对齐方式。
-define gui.history_name_xpos = 233
+define gui.history_name_xpos = 0.5
 define gui.history_name_ypos = 0
-define gui.history_name_width = 233
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 255
+define gui.history_name_xalign = 0.5
 
 ## 对话文本的坐标、宽度和对齐方式。
-define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
+define gui.history_text_xpos = 0.5
+define gui.history_text_ypos = 60
 define gui.history_text_width = 1110
-define gui.history_text_xalign = 0.0
+define gui.history_text_xalign = 0.5
 
 
 ## NVL 模式 ######################################################################
