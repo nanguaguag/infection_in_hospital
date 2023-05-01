@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-The label scene4 is defined twice, at File "game/scene4.rpyc", line 13:
-
-and File "game/scene456.rpy", line 13:
-label scene4:
-
-
-The label correct is defined twice, at File "game/scene4.rpyc", line 192:
-
-and File "game/scene456.rpy", line 156:
-label correct:
-
+File "game/scene789.rpy", line 773: end of line expected.
+    me "尹青姐，如果不是你，我根本不会这么明了地意识到医院感染的危害性……这是我们医务工作者，最容易忽略"的隐"患。"
+                                                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon May  1 15:07:55 2023
+Tue May  2 00:34:34 2023

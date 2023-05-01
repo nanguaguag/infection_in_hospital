@@ -29,7 +29,7 @@ label scene4:
     "身负如此重大的使命，我很快就接受了现实。"
 
     # #此时屏幕中央显示一个框框，显示“危险值 100”#
-    show text "{color=#f76d47}{size=+35}危险值 {b}[risk_level]{/b}{/size}{/color}" at center_to_corner
+    show text "{color=#f76d47}{size=+35}危险值：{b}[risk_level]{/b}{/size}{/color}" at center_to_corner
     with dissolve
 
     "我还记得，院感危机的导火索是——"
@@ -146,7 +146,7 @@ label scene6:
     me "尹青姐……"
     "尹青姐现在怎么样了呢？她是明天的手术吗？还是后天？"
     "我很想见她，见她最后一面。"
-    show bg grey with pixellate
+    scene bg grey with pixellate
     # （主角：立绘2：严肃）
     show duhong serious with dissolve
     "……不，不能是最后一面。"
@@ -155,12 +155,15 @@ label scene6:
     "……这就是尹青姐所说的，医生的职责吧？"
     "这座医院的崩坏需要我来拯救。"
     "我下定决心，从地上站起来，推开办公室的门。"
-    return
+    jump scene7
 
 label correct:
-    show text "{color=#f76d47}{size=+30}危险值 {b}-5{/b}{/size}{/color}" at truecenter
+    show text "{color=#f76d47}{size=25}危险值 {b}-5{/b}{/size}{/color}" at truecenter
     with dissolve
-    hide text "{color=#f76d47}{size=+30}危险值 {b}-5{/b}{/size}{/color}"
+    hide text "{color=#f76d47}{size=25}危险值 {b}-5{/b}{/size}{/color}"
     with dissolve
     $ risk_level -= 5
+    show text "{color=#f76d47}{size=+35}危险值：{b}[risk_level]{/b}{/size}{/color}":
+        xalign 0.0
+        yalign 0.0
     return

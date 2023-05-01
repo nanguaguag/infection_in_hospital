@@ -48,7 +48,7 @@ init -2:
         repeat 
 
 label start:
-    jump scene1
+    jump scene7
 
 # 第一幕（bgm1：轻快）
 label scene1:
