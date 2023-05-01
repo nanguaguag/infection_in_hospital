@@ -27,7 +27,7 @@ transform eye_blink:
     alpha 0.0
 
 
-init python:
+init -10 python:
     def eyewarp(x):
         return x**1.33
     eye_open = ImageDissolve("eye.png", .5, ramplen=128, reverse=False, time_warp=eyewarp)
@@ -95,8 +95,10 @@ init python:
     Shake = renpy.curry(_Shake)
 
 label scene2:
+    $ renpy.movie_cutscene("images/background/logo.webm")
+    scene bg grey with dissolve
     #背景6：黑暗的房间#
-    scene room dark
+    scene room dark with dissolve
     # （主角：立绘1：呆滞）
     show duhong mindblank
     with dissolve
@@ -117,12 +119,12 @@ label scene2:
     "悲痛之中，尹青姐曾告诉我的那番话再度响起："
     scene bg grey
     with dissolve
-    show yinqing smile
-    with dissolve
-    yinqing "好呀，那姐姐就等着小杜医生的好消息咯！"
-    yinqing "……要记得，尽到一个医生的职责。"
+    show yiqing smile
+    with pixellate
+    yiqing "好呀，那姐姐就等着小杜医生的好消息咯！"
+    yiqing "……要记得，尽到一个医生的职责。"
     scene bg grey
-    with dissolve
+    with pixellate
     "医生的……职责？"
     "儿时的我似乎曾这么问过她。"
     show duhong young
@@ -141,7 +143,12 @@ label scene2:
     "我靠在自己的双腿上，意识与双眼一起，逐渐模糊。"
     scene bg grey
     with Dissolve(2)
+    jump scene3
 
+label scene3:
+    # 第三幕
+    $ renpy.movie_cutscene("images/background/logo.webm")
+    scene bg grey with dissolve
     # #背景1：全黑#
     man "……醒醒……杜鸿！……"
     "……似乎有人在……叫我的名字吗？是邻居叔叔吗？"
@@ -186,7 +193,7 @@ label scene2:
     with dissolve
     me "不好意思，我昨晚喝多了，请问您是……?"
     # （◎立绘：方岷：吃惊）#居中#
-    show fangmin frightened
+    show fangmin shocked
     with dissolve
     "男人脸上的表情逐渐由疑惑转变为惊恐。"
     man "老杜，你这是咋了？不就睡个懒觉吗，咋还傻了呢？"
@@ -237,3 +244,4 @@ label scene2:
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # *画面中央：日历*
     "是九年前的4月22号……"
+    jump scene4
