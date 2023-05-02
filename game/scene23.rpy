@@ -33,18 +33,6 @@ init -10 python:
     eye_open = ImageDissolve("eye.png", .5, ramplen=128, reverse=False, time_warp=eyewarp)
     eye_shut = ImageDissolve("eye.png", .5, ramplen=128, reverse=True, time_warp=eyewarp)
 
-# # eye open&shut usage:
-# label start:
-#     scene black
-#     "Asleep"
-#     scene white
-#     with eye_open
-#     "Awake"
-#     scene black
-#     with eye_shut
-#     "Asleep"
-#     return
-
 init python:
     # 全屏抖动特效
     import math
@@ -141,6 +129,7 @@ label scene2:
     "我凄凉地笑了笑。我深知这只是我的奢望。尹青姐的离开是无法扭转的事实。"
     "就没有任何办法了吗……"
     "我靠在自己的双腿上，意识与双眼一起，逐渐模糊。"
+    stop music fadeout 2.0
     scene bg grey
     with Dissolve(2)
     jump scene3
@@ -178,6 +167,9 @@ label scene3:
     show duhong confused
     with dissolve
     "我四下打量，我似乎正身处我毫无印象的地方。"
+
+    play music "audio/music/bgm3_back.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
+
     "两张单人床陈列在狭小的房间里，旁边的衣架上挂着再熟悉不过的白大褂。"
     "我这是在学校宿舍？但我住的不是双人间啊。"
     "不……我……我不是在外公家吗？我记得我查着九年前院感事件，查着查着就睡着了……"
@@ -241,6 +233,7 @@ label scene3:
     # *画面中央：日历*
     # （主角：立绘1：惊吓）
     me "果然……"
+    stop music fadeout 2.0
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # *画面中央：日历*
     "是九年前的4月22号……"

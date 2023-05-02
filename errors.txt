@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/scene789.rpy", line 773: end of line expected.
-    me "尹青姐，如果不是你，我根本不会这么明了地意识到医院感染的危害性……这是我们医务工作者，最容易忽略"的隐"患。"
-                                                         ^
+File "game/scene456.rpy", line 107: expected end of line
+    stop music （主角：立绘2：严肃）
+               ^
+
+File "game/scene789.rpy", line 361: expected end of line
+    stop music TODO
+               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue May  2 00:34:34 2023
+Tue May  2 21:43:55 2023

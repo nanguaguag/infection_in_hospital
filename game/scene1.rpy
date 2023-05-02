@@ -16,6 +16,17 @@
 # ⑦ 阿姨：黑影即可，便装，无表情变化
 # ⑧ 药师（抵触男主那个）：不需要立绘
 
+# * 背景2：餐厅白天
+image restaurant day = Tile("images/background/restaurant_day.png")
+# * 背景3：医生办公室内
+image office = Tile("images/background/office.png")
+# * 背景4：医院消毒中心内
+# * 背景5：双人宿舍内
+image dormitory = Tile("images/background/dormitory.png")
+# * 背景6：黑暗的房间
+image room dark = Tile("images/background/room_dark.png")
+image calendar = Tile("images/background/calendar.png")
+
 # TODO: 语句结束的 >>>
 #       屏幕颤动特效
 #       眨眼特效
@@ -48,7 +59,7 @@ init -2:
         repeat 
 
 label start:
-    jump scene7
+    jump scene1
 
 # 第一幕（bgm1：轻快）
 label scene1:
@@ -56,6 +67,7 @@ label scene1:
     scene bg grey with fade
     "两小时前的我根本不会想到接下来会发生什么。"
     "那时，我还在跟老家栗镇的长辈们喝着酒谈天说地。"
+    play music "audio/music/bgm1_happy.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
     "我从小学毕业后离开栗镇就再没回来过，此次归乡是因为要帮外公外婆处理一些手续。"
     "令我意外的是，我一从大巴上下来，就有一排叔叔阿姨来迎接我，那些面孔上都挂着熟悉的、亲切的微笑。"
 
@@ -117,6 +129,8 @@ label scene1:
 
     yiqing "好呀，姐姐就等着小杜医生的好消息咯！"
 
+    stop music fadeout 1.0
+
     # （◎立绘：尹青（立绘3））#居中#
     show yiqing pregnant at center
     with pixellate
@@ -126,6 +140,8 @@ label scene1:
     scene bg grey with pixellate
     "可叔叔阿姨却不回应我的好奇。"
 
+    play music "audio/music/bgm2_tense.mp3" fadein 0.5 fadeout 2.0 volume 0.5 loop 
+
     # （主角：立绘1：疑惑）
     show duhong confused at center
     with dissolve
@@ -134,7 +150,7 @@ label scene1:
     "我心里不由“咯噔”一声。"
 
     # 背景2：餐厅白天
-    scene bg restaurant day
+    scene restaurant day
     with dissolve
     # （主角：立绘1：呆滞）
     me "叔叔阿姨？尹青姐怎么了？"

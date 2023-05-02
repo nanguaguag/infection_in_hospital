@@ -2,6 +2,7 @@ label scene7:
     # 第七幕
     $ renpy.movie_cutscene("images/background/logo.webm")
     # #背景4：医院消毒中心内#
+    
     scene hospital sanitary center with dissolve
     # （主角：立绘2：严肃）
     show duhong serious at left
@@ -56,7 +57,7 @@ label scene7:
 
     menu:
         "属于":
-            call correct
+            call correct from _call_correct_3
             "没错，医院工作人员的院内感染也属于院感。"
         "不属于":
             "医院工作人员的感染当然也属于院感了……为了尹青姐，打起精神啊。"
@@ -68,7 +69,7 @@ label scene7:
         "内源感染":
             "交叉交叉，指的当然是外源啊……为了尹青姐，打起精神啊。"
         "外源感染":
-            call correct
+            call correct from _call_correct_4
             "没错，外源感染是天然宿主的病原体感染或传递给非天然宿主的现象，是指细菌、病毒、真菌、寄生虫等病原体侵入人体所引起的局部组织和全身性炎症反应。"
 
     # 【问题6】
@@ -76,7 +77,7 @@ label scene7:
 
     menu:
         "不属于":
-            call correct
+            call correct from _call_correct_5
             "经胎盘获得的感染只与父母有关，和医院无关，其感染自然不属于院感。"
         "属于":
             "经胎盘感染和医院有什么关系呢？哎，为了尹青姐，打起精神啊。"
@@ -106,7 +107,7 @@ label scene7:
 
     menu:
         "第四步":
-            call correct
+            call correct from _call_correct_6
             "是的，“弓”这一步是洗指背，曲各手指关节，半握拳把指背放在另一手掌心旋转揉搓，双手交换进行。"
             "另外，“七步洗手法”的全步骤为“内、外、夹、弓、大、立、腕”，即分别清洗手掌、指缝、指背、拇指、指间和手腕手臂。"
         "第五步":
@@ -128,7 +129,7 @@ label scene7:
         "手术器械、胃肠道内镜、麻醉机管道":
             "粗心了……胃肠道内镜只与完整黏膜相接触，而不进入人体无菌组织、器官和血流，也不接触破损皮肤、破损黏膜的物品，只能算是中度危险物品。"
         "心脏导管、腹腔镜、穿剌针":
-            call correct
+            call correct from _call_correct_7
             "正确！它们都属于高度危险物品。"
             "要记得，高度危险物品有手术器械、穿剌针、腹腔镜、活检钳、心脏导管、植入物等等。"
 
@@ -172,6 +173,8 @@ label scene7:
     "就会因为这些医生这么想，才会导致这些悲剧出现……"
 
     "我怒火涌上心头，正欲骂他一通——"
+
+    play music "audio/music/bgm3_back.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     # （◎立绘：药师）#居左#
     # （◎立绘：潘叶：严肃）#居右#
@@ -242,6 +245,8 @@ label scene7:
     "我看向消毒中心的大家。"
 
     me "……我有自己的要事要办。"
+    stop music fadeout 1.0
+
     jump scene8
 
 label scene8:
@@ -260,6 +265,8 @@ label scene8:
     "男人" "「进来吧。」"
 
     "我推开门，见到了那张熟悉的脸。"
+
+    play music "audio/music/bgm2_tense.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     # （◎立绘：岳为：严肃）#居中#
     show yuewei serious at center with dissolve
@@ -329,7 +336,7 @@ label scene8:
 
     menu:
         "护理部副主任":
-            call correct
+            call correct from _call_correct_8
             "没错，护理部副主任即医院感染管理科副主任。"
         "医院感染管理科临床医师":
             "不对啊！应该是护理部副主任。"
@@ -351,10 +358,13 @@ label scene8:
 
     "岳为仍然一语不发，甚至不敢和我对视。"
 
+    stop music fadeout 2.0
+
     # TODO
     # （这里可以再插几个拷问院长的问题hhh或者就不设分支搞单纯问答，知识展示那种）
 
     # （注：此处为结局分支。若危险值至此仍在20以上，则开启BE。以下为BE。）
+    
     if risk_level >= 20:
         jump bad_ending
     else:
@@ -380,6 +390,8 @@ label bad_ending:
     # （◎立绘：岳为：严肃）#居中#
     show yuewei serious at center with dissolve
     "岳为缓缓抬头，犀利的眼神与我对视。"
+
+    play music "audio/music/bgm4_surprised.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     yuewei "小杜医生，你还是太年轻了。"
 
@@ -418,6 +430,8 @@ label bad_ending:
     show yuewei serious at center
     with dissolve
     yuewei "杜鸿，你别忘了，我才是栗村的院长！"
+
+    stop music fadeout 2.0
 
     hide yuewei with dissolve
     # （主角：立绘2：愤怒）
@@ -526,7 +540,7 @@ label bad_ending:
     return
 
 label happy_ending:
-    # （注：此处为结局分支。若危险值至此已降为20及以下，则开启HE。以下为HE。）
+    stop music
     # （主角：立绘2：严肃）
     show duhong serious at left
     with dissolve
@@ -569,6 +583,8 @@ label happy_ending:
     show duhong shocked at left
     with dissolve
     me "欸？"
+
+    play music "audio/music/bgm3_back.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     "他的发言出乎我的意料。"
 
@@ -641,10 +657,14 @@ label happy_ending:
     with dissolve
     yuewei "你就尽管说要怎么做，我作为院长，一定严格执行。"
 
+    stop music fadeout 2.0
+
     "我眼神坚定，点了点头。"
     jump scene9
 
 label scene9:
+    play music "audio/music/bgm7_good.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
+
     # 第九幕（HE）（BE无该幕）
     $ renpy.movie_cutscene("images/background/logo.webm")
     # #背景6：医院走廊#
@@ -685,9 +705,13 @@ label scene9:
 
     "边回想着这奇异的穿越之旅，没过多久，我就来到了自己的办公室门前。"
 
+    stop music fadeout 1.0
+
     # （主角：立绘2：严肃）
     show duhong serious with dissolve
     "站在门前，我突然停下了动作。过了片刻，才扭开门把。"
+
+    play music "audio/music/bgm8_fareware.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     # （主角：立绘2：呆滞）
     show duhong mindblank with dissolve
@@ -830,6 +854,8 @@ label scene9:
     scene bg grey with dissolve
     show duhong smile standing at center
     "那位“小杜医生”。"
+
+    stop music fadeout 2.0
 
     scene bg grey
     show text "{size=+35}{color=#90EE90}—The End—{/color}{/size}"

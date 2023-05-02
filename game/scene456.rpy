@@ -86,6 +86,8 @@ label scene5:
     "她这副态度把我都整不安了。说实话，我本来想劈头骂她一顿的。"
     "我把她配出的、将应用于明天手术的戊二醛溶液带去了化验科。不一会儿，令我大跌眼镜的结果就出来了。"
 
+    play music "audio/music/bgm4_surprised.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
+
     # （主角：立绘2：惊吓）
     show duhong scared
     me "0…………0.1%%？"
@@ -101,6 +103,9 @@ label scene5:
     show panye confused
     panye "那个瓶上确实没标有效浓度……"
     me "什么？"
+
+    stop music fadeout 2.0
+
     # （主角：立绘2：严肃）
     show duhong serious
     "潘叶一脸忧虑地看着我。我猛烈地预感到，这或许并不是她粗心的过失。"
@@ -150,19 +155,27 @@ label scene6:
     # （主角：立绘2：严肃）
     show duhong serious with dissolve
     "……不，不能是最后一面。"
+
+    play music "audio/music/bgm5_enthusiastic.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
+
     "我要把尹青姐救回来。我要把尹青姐和其他一百多位产妇都救回来。"
     "因为……我是医生。"
     "……这就是尹青姐所说的，医生的职责吧？"
     "这座医院的崩坏需要我来拯救。"
     "我下定决心，从地上站起来，推开办公室的门。"
+
+    stop music fadeout 1.0
+
+    scene Solid("#000") with Dissolve(2.0)
+
     jump scene7
 
 label correct:
-    show text "{color=#f76d47}{size=25}危险值 {b}-5{/b}{/size}{/color}" at truecenter
+    show text "{color=#f76d47}{size=25}危险值 {b}-10{/b}{/size}{/color}" at truecenter
     with dissolve
-    hide text "{color=#f76d47}{size=25}危险值 {b}-5{/b}{/size}{/color}"
+    hide text "{color=#f76d47}{size=25}危险值 {b}-10{/b}{/size}{/color}"
     with dissolve
-    $ risk_level -= 5
+    $ risk_level -= 10
     show text "{color=#f76d47}{size=+35}危险值：{b}[risk_level]{/b}{/size}{/color}":
         xalign 0.0
         yalign 0.0
