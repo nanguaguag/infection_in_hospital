@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scene456.rpy", line 107: expected end of line
-    stop music （主角：立绘2：严肃）
-               ^
-
-File "game/scene789.rpy", line 361: expected end of line
-    stop music TODO
-               ^
+File "game/scene456.rpy", line 125: expected 'image_name_component' not found.
+    show "images/duhong/duhong2_sad.png" at center
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue May  2 21:43:55 2023
+Thu May  4 20:31:11 2023

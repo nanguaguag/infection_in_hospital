@@ -33,7 +33,7 @@ image calendar = Tile("images/background/calendar.png")
 #       正在说话的人物高亮
 #       模糊视野特效
 
-define me = Character("我", color="#707de2", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 就是主角杜鸿
+define me = Character("我", color="#707de2", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled", image="duhong") # 就是主角杜鸿
 define panye = Character("潘叶", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 药师潘叶
 define fangmin = Character("方岷", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 室友方岷
 define yuewei = Character("岳为", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 院长岳为
@@ -42,7 +42,29 @@ define uncle = Character("大叔", what_prefix="「", what_suffix="」", ctc="ct
 define aunt = Character("阿姨", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 阿姨
 define pharmaceutist = Character("药师", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 药师（抵触男主那个）
 image bg grey = Solid("#2a2a2a") # 背景1：全黑
+image bg black = Solid("#000") # 背景1：全黑
 
+image side duhong sad = "images/duhong/duhong_sad.png"
+image side duhong smile = "images/duhong/duhong_smile.png"
+image side duhong 1 sad = "images/duhong/duhong1_sad.png"
+image side duhong 1 smile = "images/duhong/duhong1_smile.png"
+image side duhong 1 shocked = "images/duhong/duhong1_shocked.png"
+image side duhong 1 confused = "images/duhong/duhong1_confused.png"
+image side duhong 2 sad = "images/duhong/duhong2_sad.png"
+image side duhong 2 smile = "images/duhong/duhong2_smile.png"
+image side duhong 2 angry = "images/duhong/duhong2_angry.png"
+image side duhong 2 shocked = "images/duhong/duhong2_shocked.png"
+image side duhong 2 serious = "images/duhong/duhong2_serious.png"
+
+image bg_dormitory = Frame("images/background/dormitory.png", 0, 0)
+image bg_calendar = Frame("images/background/calendar.png", 0, 0)
+image bg_hospital_sanitary_center = Frame("images/background/hospital_sanitary_center.png", 0, 0)
+image bg_office = Frame("images/background/office.png", 0, 0)
+image bg_restaurant_day = Frame("images/background/restaurant_day.png", 0, 0)
+image bg_room_dark = Frame("images/background/room_dark.png", 0, 0)
+image bg_countryside = Frame("images/background/countryside.png", 0, 0)
+image bg_hospital_hallway_he = Frame("images/background/hospital_hallway_he.png", 0, 0)
+image bg_hospital_hallway_be = Frame("images/background/hospital_hallway_be.png", 0, 0)
 
 label splashscreen:
     $ renpy.movie_cutscene("images/background/logo.webm")
@@ -50,10 +72,7 @@ label splashscreen:
 
 init -2:
     image ctc_blink:
-        "gui/arrow2.png"
-        yanchor -0.5
-        xanchor -0.5
-        zoom 0.5
+        "gui/syringe.png"
         linear 0.75 alpha 1.0
         linear 0.75 alpha 0.0
         repeat 
@@ -73,29 +92,30 @@ label scene1:
 
     # 背景2：餐厅白天
     # （主角：立绘1：笑）
-    show duhong smile at center
-    with dissolve
+    scene bg_countryside with fade
+    # show duhong smile at center
+    # with dissolve
     "他们都是看着我长大的，对我来说和亲人无异。"
     "我本打算任务完成后即刻离开，谁料长辈们硬要拉着我叙旧，我盛情难却，只得把返程时间延后到了明早。"
 
     # （◎立绘：大叔）#居左#
-    show uncle at left
+    show uncle 
     with dissolve
     uncle "小杜啊，没想到这一别竟是十年啊！你跟你爸妈走的时候还只是个小学生呢！"
 
     # （◎立绘：大叔）#居左#
-    show uncle at left
+    show uncle 
     # （◎立绘：阿姨）#居右#
-    show aunt at right
+    show aunt 
     with dissolve
     aunt "是啊，一回来都大四了，学的是医学？"
-    
-    me "是的，正在准备年底考研。"
+
+    me 1 smile "是的，正在准备年底考研。"
     
     aunt "哎，医生真好啊，工作稳定，但是也有风险，我记得隔壁家的……"
     "阿姨话说到一半，突然好像想起来什么似的，匆忙地咳了两声。"
 
-    me "隔壁家的……？"
+    me 1 confused "隔壁家的……？"
     "我正在纳闷，一旁的大叔突然接过话茬。"
 
     # # （主角：立绘1：疑惑）
@@ -103,12 +123,12 @@ label scene1:
     
     uncle "欸，那个，小杜啊，你那个，要吃水果吗，我去家里给你拿点……"
     
-    me "哦，隔壁家的是那位——"
+    me 1 confused "哦，隔壁家的是那位——"
 
     # # （主角：立绘1：笑）
     # show duhong smile at cente
     
-    me "对了，小时候接过我放学的尹青姐呢？我记得我走时，她正怀着孕呢，现在怎么样了？"
+    me 1 smile "对了，小时候接过我放学的尹青姐呢？我记得我走时，她正怀着孕呢，现在怎么样了？"
 
     "回想起尹青姐，我的脸上不由浮现出了笑容。"
 
@@ -143,17 +163,17 @@ label scene1:
     play music "audio/music/bgm2_tense.mp3" fadein 0.5 fadeout 2.0 volume 0.5 loop 
 
     # （主角：立绘1：疑惑）
-    show duhong confused at center
+    # show duhong confused at center
     with dissolve
     "一片死寂。"
 
     "我心里不由“咯噔”一声。"
 
     # 背景2：餐厅白天
-    scene restaurant day
+    scene bg_restaurant_day
     with dissolve
     # （主角：立绘1：呆滞）
-    me "叔叔阿姨？尹青姐怎么了？"
+    me 1 confused "叔叔阿姨？尹青姐怎么了？"
 
     # （◎立绘：大叔）#居左#
     show uncle at left
@@ -164,17 +184,17 @@ label scene1:
     
     "终于，阿姨叹了一口气。"
     
-    "阿姨1" "「小青她……走了好久了。」"
+    aunt "小青她……走了好久了。"
 
     "我愣了一下。"
     
     me "走……是指？"
     
-    "大叔1" "「……镇上那个栗村妇儿医院，出了一些事情。」"
+    uncle "……镇上那个栗村妇儿医院，出了一些事情。"
     
     me "这和栗村妇儿医院……有什么关系？"
     
-    "阿姨1" "「小青她当年在栗村妇儿医院生孩子，可是医院出了问题，小青本来身子骨也不硬，就……」"
+    aunt "小青她当年在栗村妇儿医院生孩子，可是医院出了问题，小青本来身子骨也不硬，就……"
 
     # 背景1：全黑
     scene bg grey
@@ -183,13 +203,14 @@ label scene1:
     "……"
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     "我瞠目结舌，一句话也说不出来。"
-    me "尹青姐和孩子，都……"
+    me 1 shocked "尹青姐和孩子，都……"
+
     "我已经有了不好的预感。"
     
     # （◎立绘：大叔）#居左#
-    show uncle at left
+    show uncle 
     with dissolve
-    "大叔1" "「都没了……她老公这之后起诉过栗村妇儿医院，很艰难，只得了一点赔偿，后来他就离开栗镇了……」"
+    uncle "都没了……她老公这之后起诉过栗村妇儿医院，很艰难，只得了一点赔偿，后来他就离开栗镇了……"
 
     "我还呆在原处。"
     

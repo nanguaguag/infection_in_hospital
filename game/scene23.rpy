@@ -86,24 +86,24 @@ label scene2:
     $ renpy.movie_cutscene("images/background/logo.webm")
     scene bg grey with dissolve
     #背景6：黑暗的房间#
-    scene room dark with dissolve
+    scene bg_room_dark with dissolve
     # （主角：立绘1：呆滞）
-    show duhong mindblank
+    show duhong1 sad at truecenter
     with dissolve
     "我抱着自己的双膝，窝在外公家逼仄的房间里。"
     "一片黑暗中，亮着的只有我的电脑。屏幕上，是我查阅的，关于九年前“栗村妇儿医院重大感染事件”的报道。"
     "我呆滞地念出屏幕上的一行行字。"
-    me "“4月22日至6月7日，共计手术292例，至9月1日止，发生感染166例，死亡2例……”"
+    hide duhong1 sad
+    me 1 sad "“4月22日至6月7日，共计手术292例，至9月1日止，发生感染166例，死亡2例……”"
     "我知道那死亡的两例是谁。那是一对母女。那本该是一对母女。"
     "鼻头一阵发酸，我把自己的脸埋在膝盖之间。"
-    me "只是一瓶配错了的戊二醛而已……怎么会这样……"
+    me 1 sad "只是一瓶配错了的戊二醛而已……怎么会这样……"
+    
     "按报道来看，事发的直接原因是栗村妇儿医院消毒中心的一位药师，误看了消毒用的戊二醛浓度，导致全院产妇与新生儿爆发了以龟型分枝杆菌为主的混合感染。"
     "仅是一处疏忽，后果竟如此严重。"
     "我难以想象有一百多位像尹青姐一样的产妇遭遇了这样的痛苦。"
     "作为一名准医务工作者，我更是痛心疾首。"
     # （主角：立绘1：悲伤）
-    show duhong grief
-    with dissolve
     "悲痛之中，尹青姐曾告诉我的那番话再度响起："
     scene bg grey
     with dissolve
@@ -115,17 +115,17 @@ label scene2:
     with pixellate
     "医生的……职责？"
     "儿时的我似乎曾这么问过她。"
-    show duhong young
-    with dissolve
-    me "是要把每一个患者救回来，对吗？"
+  
+    me 1 confused "是要把每一个患者救回来，对吗？"
     "……按我的印象，这就是正确答案。"
-    show duhong grief
+    # show duhong grief
     with dissolve
     "可我却看着和我曾如此亲近之人这么离开……"
     "黑暗中，回想起我在大学中学过的院感防控与管理知识，我不由得产生了一个无端的想法。"
-    me "要是……我能回到那个时候……把一切都纠正过来……"
+    me 1 sad "要是……我能回到那个时候……把一切都纠正过来……"
     "是不是就能杜绝她们的痛苦了呢？"
     "是不是……还能看见尹青姐的笑容呢？"
+    show duhong1 sad at truecenter with dissolve
     "我凄凉地笑了笑。我深知这只是我的奢望。尹青姐的离开是无法扭转的事实。"
     "就没有任何办法了吗……"
     "我靠在自己的双腿上，意识与双眼一起，逐渐模糊。"
@@ -142,29 +142,33 @@ label scene3:
     man "……醒醒……杜鸿！……"
     "……似乎有人在……叫我的名字吗？是邻居叔叔吗？"
     # #背景5：双人宿舍内#
-    scene dormitory at eye_blink
+    scene bg_dormitory
+    show eye_half_open at eye_blink
     with Pause(2)
     "我头疼欲裂，艰难地睁开双眼。"
     # # （主角：立绘1：疑惑）
     # show duhong confused
     # with dissolve
-    show fangmin face # 可能没有画出来
+    show fangmin confused:
+        zoom 2.0
+        truecenter
     "映入眼帘的是一张巨大的陌生男人的脸。"
     # *对话框震动*
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # （主角：立绘1：惊吓）
-    show duhong scared
-    me "{size=+35}啊啊啊啊！{/size}"
+    # show duhong scared
+    me 2 shocked "{size=+35}啊啊啊啊！{/size}"
     # *全画面：撞击特效* # TODO
     "我被吓得弹射起来，脑袋狠狠地撞上背后的墙。"
     # （主角：立绘1：悲伤）
-    show duhong grief
-    me "痛死……"
+    # show duhong grief
+    me 2 shocked "痛死……"
     # *全画面：眨眼特效*
-    scene dormitory at eye_blink
+    scene bg_dormitory
+    show eye_half_open at eye_blink
     with Pause(2)
     # （主角：立绘1：疑惑）
-    show duhong confused
+    # show duhong confused
     with dissolve
     "我四下打量，我似乎正身处我毫无印象的地方。"
 
@@ -181,47 +185,46 @@ label scene3:
     "…不认识。"
     "会不会是哪个我记不得了的亲戚或者邻居？"
     "我试探着开口。"
-    show duhong at left
-    with dissolve
-    me "不好意思，我昨晚喝多了，请问您是……?"
+    
+    me 2 shocked "不好意思，我昨晚喝多了，请问您是……?"
     # （◎立绘：方岷：吃惊）#居中#
     show fangmin shocked
     with dissolve
     "男人脸上的表情逐渐由疑惑转变为惊恐。"
     man "老杜，你这是咋了？不就睡个懒觉吗，咋还傻了呢？"
     # （主角：立绘2：惊吓）
-    show duhong frightened at left
+    # show duhong frightened at left
     with dissolve
-    me "啊？"
+    me 2 shocked "啊？"
     man "我是方岷啊！咱俩是室友啊！今天还得一起去上班啊！"
     # （主角：立绘2：疑惑）
-    show duhong confused at left
+    # show duhong confused at left
     with dissolve
-    me "上班？上什么？"
+    me 2 shocked "上班？上什么？"
     fangmin "咱、咱俩不是在栗村院感科上班吗？你别吓我哈？"
 
     "院感科？医院感染管理科？不，不对——"
 
     # *对话框震动*
     # （主角：立绘1：惊吓）
-    scene dormitory with dissolve
-    show duhong scared at left
+    scene bg_dormitory with fade
+    # show duhong scared at left
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # （◎立绘：方岷：吃惊）#居中#
     show fangmin shocked at center
     with dissolve
-    me "你、你刚刚说我们在哪家医院上班？"
+    me 2 shocked "你、你刚刚说我们在哪家医院上班？"
     # （◎立绘：方岷：吃惊）#居中#
     fangmin "啊？在、在栗村啊，栗村妇儿医院啊，我们都叫栗村的……"
     "栗村妇儿医院？这不就是——"
     "我脑中划过一个不切实际的想法。"
 
     # （主角：立绘1：疑惑）
-    show duhong confused at left
+    # show duhong confused at left
     with dissolve
-    me "方岷，今天是几号？"
+    me 2 shocked "方岷，今天是几号？"
     # （◎立绘：方岷：疑惑）#居中#
-    show duhong confused at center
+    # show duhong confused at center
     with dissolve
     "方岷一脸狐疑地看向墙上的日历。"
     # （◎立绘：方岷：疑惑）#居中#
@@ -229,12 +232,11 @@ label scene3:
 
     # *全画面震动*
     "我立马下床，跑到日历面前，看着日历顶端的年份——"
-    scene calendar with dissolve
+    show bg_calendar with dissolve
     # *画面中央：日历*
     # （主角：立绘1：惊吓）
-    me "果然……"
-    stop music fadeout 2.0
-    with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
+    me 2 shocked "果然……"
+    # with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # *画面中央：日历*
     "是九年前的4月22号……"
     jump scene4
