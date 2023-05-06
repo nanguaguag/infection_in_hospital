@@ -223,10 +223,10 @@ label scene7:
     scene bg grey
 
     "……是这样吗？"
-    show yiqing smile at center
+    show yinqing smile at center
     with pixellate 
     # （◎立绘：尹青（立绘1））#居中#
-    yiqing "……小鸿，你要记得，作为一个医生的职责。"
+    yinqing "……小鸿，你要记得，作为一个医生的职责。"
 
     scene bg_hospital_sanitary_center with pixellate
     
@@ -272,7 +272,7 @@ label scene8:
     play music "audio/music/bgm2_tense.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     # （◎立绘：岳为：严肃）#居中#
-    scene dean office with dissolve
+    scene bg_dean_office with dissolve
     show yuewei serious at center with dissolve
 
     "我在报道上见过他——栗村妇儿医院的院长，岳为。"
@@ -376,7 +376,7 @@ label scene8:
 
 label bad_ending:
     stop music
-    scene dean office be with dissolve
+    scene bg_dean_office_be with dissolve
     "我的一番问话之后，岳为早已无话可说。"
     # （◎立绘：岳为：严肃）#居中#
     show yuewei serious at center with dissolve
@@ -713,7 +713,7 @@ label scene9:
     # show duhong mindblank with dissolve
     scene bg_office with dissolve
     # （◎立绘：尹青（立绘2：笑））#居中#
-    show yiqing smile at center
+    show yinqing smile at center
     "尹青姐站在我的办公室里，抱着她满月不久的宝宝。"
 
     "微笑着，麻花辫，格子裙。"
@@ -723,14 +723,14 @@ label scene9:
     "这是我在她生下孩子后第一次看见她。上次，是我在产房远处，远远地望着她。"
 
     # （◎立绘：尹青（立绘2：疑惑））#居中#
-    show yiqing confused at center
+    show yinqing confused at center
     with dissolve
     "尹青姐似乎十分惊讶。"
 
-    yiqing "您认识我？"
+    yinqing "您认识我？"
 
     # （主角：立绘22：闭眼）
-    hide yiqing
+    hide yinqing
     # show duhong eye_closed at center
     with dissolve
     "我愣了一下，苦笑着摇摇头，把呼之欲出的眼泪一点点收回去。"
@@ -742,21 +742,21 @@ label scene9:
 
     # hide duhong
     # （◎立绘：尹青（立绘2：疑惑））#居中#
-    show yiqing confused at center
+    show yinqing confused at center
     with dissolve
     pause 0.5
     # （◎立绘：尹青（立绘2：笑））#居中#
-    show yiqing smile at center
+    show yinqing smile at center
     with dissolve
     "尹青姐笑了。"
 
-    yiqing "您是小杜医生吧？我在报纸上看到了您的报道，您做了很了不起的事。要不是您，也许我的女儿就不能顺出生了呢。"
+    yinqing "您是小杜医生吧？我在报纸上看到了您的报道，您做了很了不起的事。要不是您，也许我的女儿就不能顺出生了呢。"
 
     "我害羞地低下头。"
 
     "尹青姐就像我记忆中一样，温柔地笑着。"
 
-    yiqing "谢谢你。"
+    yinqing "谢谢你。"
 
     "阳光穿过窗玻璃，照在尹青姐的脸庞上。她怀里的小孩“咯吱咯吱”地笑起来。"
 
@@ -765,11 +765,11 @@ label scene9:
     me 2 smile "不……是我该谢谢你。"
 
     # （◎立绘：尹青（立绘2：疑惑））#居中#
-    show yiqing confused at center
+    show yinqing confused at center
     with dissolve
     "尹青姐歪着头，露出疑惑的神情。"
 
-    hide yiqing
+    hide yinqing
     # （主角：立绘22：呆滞）
     # show duhong mindblank at center
     with dissolve
@@ -795,7 +795,7 @@ label scene9:
     me 2 serious "尹青姐，就算我回去了，我也不会荒废我学过的、向栗村的大家传播过的院感防控知识。我会在我接下来的医者生涯中，继续传播它、宣扬它，不让那样的事故再次发生。"
 
     # hide duhong
-    show yiqing confused at center
+    show yinqing confused at center
     with dissolve
     "尹青姐眨巴着眼睛，抚摸着怀里的孩子。"
 
@@ -811,32 +811,32 @@ label scene9:
     scene bg grey with pixellate
     # show duhong young at left with dissolve
     me 2 serious "尹青姐姐，我长大之后，也要当医生，把你身上的病都治好！"
-    show yiqing smile at center with dissolve
-    yiqing "好呀，那姐姐就等着小杜医生的好消息咯。"
+    show yinqing smile at center with dissolve
+    yinqing "好呀，那姐姐就等着小杜医生的好消息咯。"
 
     me 2 serious "没问题！"
 
-    yiqing "小鸿啊，你一定要记得，作为医生的职责是什么。"
+    yinqing "小鸿啊，你一定要记得，作为医生的职责是什么。"
 
     me 2 serious "职责……就是把所有患者都救回来，对吗？"
 
-    yiqing "……说的没错，但能不能救回来，并不是你所能控制的。"
+    yinqing "……说的没错，但能不能救回来，并不是你所能控制的。"
 
     me 2 serious "怎么会呢？我就是会把所有人都治好的。"
 
-    yiqing "……"
+    yinqing "……"
 
-    yiqing "小鸿，你要记住。"
+    yinqing "小鸿，你要记住。"
 
-    yiqing "作为医生最应该铭记于心的，是平等地珍视每一条生命。"
+    yinqing "作为医生最应该铭记于心的，是平等地珍视每一条生命。"
 
-    yiqing "无论能力大小，无论困难与否……无论究竟能不能成功。"
+    yinqing "无论能力大小，无论困难与否……无论究竟能不能成功。"
 
-    yiqing "都要把每位病人的生命当做自己的家人一样，去珍惜，去为他们……着想。"
+    yinqing "都要把每位病人的生命当做自己的家人一样，去珍惜，去为他们……着想。"
 
     scene bg_office with pixellate
 
-    show yiqing smile with dissolve
+    show yinqing smile with dissolve
 
     "我眼前的尹青姐，像回忆里那样灿烂地笑着。"
 

@@ -147,7 +147,7 @@ label scene6:
     "逐渐地，我仿佛在那片眩晕中看见了一张脸。"
     scene bg grey with dissolve
     # （◎立绘：尹青（立绘1：笑））#居中#
-    show yiqing smile at center
+    show yinqing_smile at center
     with pixellate
     me 2 serious "尹青姐……"
     "尹青姐现在怎么样了呢？她是明天的手术吗？还是后天？"

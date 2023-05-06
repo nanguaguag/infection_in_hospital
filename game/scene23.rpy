@@ -88,12 +88,11 @@ label scene2:
     #背景6：黑暗的房间#
     scene bg_room_dark with dissolve
     # （主角：立绘1：呆滞）
-    show duhong1 sad at truecenter
-    with dissolve
+    show duhong1_sad at truecenter with dissolve
     "我抱着自己的双膝，窝在外公家逼仄的房间里。"
     "一片黑暗中，亮着的只有我的电脑。屏幕上，是我查阅的，关于九年前“栗村妇儿医院重大感染事件”的报道。"
     "我呆滞地念出屏幕上的一行行字。"
-    hide duhong1 sad
+    hide duhong1_sad with dissolve
     me 1 sad "“4月22日至6月7日，共计手术292例，至9月1日止，发生感染166例，死亡2例……”"
     "我知道那死亡的两例是谁。那是一对母女。那本该是一对母女。"
     "鼻头一阵发酸，我把自己的脸埋在膝盖之间。"
@@ -107,10 +106,10 @@ label scene2:
     "悲痛之中，尹青姐曾告诉我的那番话再度响起："
     scene bg grey
     with dissolve
-    show yiqing smile
+    show yinqing smile at center
     with pixellate
-    yiqing "好呀，那姐姐就等着小杜医生的好消息咯！"
-    yiqing "……要记得，尽到一个医生的职责。"
+    yinqing "好呀，那姐姐就等着小杜医生的好消息咯！"
+    yinqing "……要记得，尽到一个医生的职责。"
     scene bg grey
     with pixellate
     "医生的……职责？"
@@ -125,7 +124,7 @@ label scene2:
     me 1 sad "要是……我能回到那个时候……把一切都纠正过来……"
     "是不是就能杜绝她们的痛苦了呢？"
     "是不是……还能看见尹青姐的笑容呢？"
-    show duhong1 sad at truecenter with dissolve
+    show duhong1_sad at truecenter with dissolve
     "我凄凉地笑了笑。我深知这只是我的奢望。尹青姐的离开是无法扭转的事实。"
     "就没有任何办法了吗……"
     "我靠在自己的双腿上，意识与双眼一起，逐渐模糊。"

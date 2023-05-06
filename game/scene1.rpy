@@ -37,7 +37,7 @@ define me = Character("我", color="#707de2", what_prefix="「", what_suffix="�
 define panye = Character("潘叶", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 药师潘叶
 define fangmin = Character("方岷", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 室友方岷
 define yuewei = Character("岳为", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 院长岳为
-define yiqing = Character("尹青", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 姐姐尹青
+define yinqing = Character("尹青", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 姐姐尹青
 define uncle = Character("大叔", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 大叔
 define aunt = Character("阿姨", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 阿姨
 define pharmaceutist = Character("药师", what_prefix="「", what_suffix="」", ctc="ctc_blink", ctc_position="nestled") # 药师（抵触男主那个）
@@ -65,6 +65,8 @@ image bg_room_dark = Frame("images/background/room_dark.png", 0, 0)
 image bg_countryside = Frame("images/background/countryside.png", 0, 0)
 image bg_hospital_hallway_he = Frame("images/background/hospital_hallway_he.png", 0, 0)
 image bg_hospital_hallway_be = Frame("images/background/hospital_hallway_be.png", 0, 0)
+image bg_dean_office = Frame("images/background/dean_office.png", 0, 0)
+image bg_dean_office_be = Frame("images/background/dean_office_be.png", 0, 0)
 
 label splashscreen:
     $ renpy.movie_cutscene("images/background/logo.webm")
@@ -135,7 +137,7 @@ label scene1:
     # 背景1：全黑
     scene bg grey with dissolve
     # （◎立绘：尹青（立绘1：笑））#居中#
-    show yiqing smile at center
+    show yinqing smile at center
     with pixellate
     "我记得，尹青姐住外公家隔壁，家里是开小卖部的。"
 
@@ -147,12 +149,12 @@ label scene1:
     "可以说，尹青姐是帮助我能走上医学道路的重要人物。"
     "我记得很深，她在听说我的医学梦想后，对我说过的那番话————"
 
-    yiqing "好呀，姐姐就等着小杜医生的好消息咯！"
+    yinqing "好呀，姐姐就等着小杜医生的好消息咯！"
 
     stop music fadeout 1.0
 
     # （◎立绘：尹青（立绘3））#居中#
-    show yiqing pregnant at center
+    show yinqing pregnant at center
     with pixellate
     "我走时，她刚被查出来怀孕，到现在，孩子也该有九岁了吧？"
 
@@ -215,7 +217,7 @@ label scene1:
     "我还呆在原处。"
     
     scene bg grey
-    show yiqing smile at center
+    show yinqing smile at center
     with pixellate
     "脑海里浮现出尹青姐的容貌，但倏忽之间，她的影像就像流沙一般消散了。"
     scene bg grey
