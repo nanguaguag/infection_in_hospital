@@ -16,20 +16,7 @@
 # ⑦ 阿姨：黑影即可，便装，无表情变化
 # ⑧ 药师（抵触男主那个）：不需要立绘
 
-# * 背景2：餐厅白天
-image restaurant day = Tile("images/background/restaurant_day.png")
-# * 背景3：医生办公室内
-image office = Tile("images/background/office.png")
-# * 背景4：医院消毒中心内
-# * 背景5：双人宿舍内
-image dormitory = Tile("images/background/dormitory.png")
-# * 背景6：黑暗的房间
-image room dark = Tile("images/background/room_dark.png")
-image calendar = Tile("images/background/calendar.png")
-
-# TODO: 语句结束的 >>>
-#       屏幕颤动特效
-#       眨眼特效
+# TODO: 
 #       正在说话的人物高亮
 #       模糊视野特效
 
@@ -57,10 +44,10 @@ image side duhong 2 shocked = "images/duhong/duhong2_shocked.png"
 image side duhong 2 serious = "images/duhong/duhong2_serious.png"
 
 image bg_dormitory = Frame("images/background/dormitory.png", 0, 0)
-image bg_calendar = Frame("images/background/calendar.png", 0, 0)
+image bg_calendar = Frame("images/background_ai/calendar.png", 0, 0)
 image bg_hospital_sanitary_center = Frame("images/background/hospital_sanitary_center.png", 0, 0)
 image bg_office = Frame("images/background/office.png", 0, 0)
-image bg_restaurant_day = Frame("images/background/restaurant_day.png", 0, 0)
+image bg_dinner_hall_day = Frame("images/background/dinner_hall_day.png", 0, 0)
 image bg_room_dark = Frame("images/background/room_dark.png", 0, 0)
 image bg_countryside = Frame("images/background/countryside.png", 0, 0)
 image bg_hospital_hallway_he = Frame("images/background/hospital_hallway_he.png", 0, 0)
@@ -166,13 +153,14 @@ label scene1:
 
     # （主角：立绘1：疑惑）
     # show duhong confused at center
-    with dissolve
+    # with dissolve
     "一片死寂。"
 
     "我心里不由“咯噔”一声。"
 
     # 背景2：餐厅白天
-    scene bg_restaurant_day
+    # scene bg_dinner_hall_day
+    scene countryside # 感觉换得有点突兀
     with dissolve
     # （主角：立绘1：呆滞）
     me 1 confused "叔叔阿姨？尹青姐怎么了？"

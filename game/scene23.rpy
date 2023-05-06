@@ -88,16 +88,14 @@ label scene2:
     #背景6：黑暗的房间#
     scene bg_room_dark with dissolve
     # （主角：立绘1：呆滞）
-    show duhong1_sad at truecenter with dissolve
+    show duhong1_sad_full at truecenter with dissolve
     "我抱着自己的双膝，窝在外公家逼仄的房间里。"
     "一片黑暗中，亮着的只有我的电脑。屏幕上，是我查阅的，关于九年前“栗村妇儿医院重大感染事件”的报道。"
     "我呆滞地念出屏幕上的一行行字。"
-    hide duhong1_sad with dissolve
-    me 1 sad "“4月22日至6月7日，共计手术292例，至9月1日止，发生感染166例，死亡2例……”"
+    "“4月22日至6月7日，共计手术292例，至9月1日止，发生感染166例，死亡2例……”"
     "我知道那死亡的两例是谁。那是一对母女。那本该是一对母女。"
     "鼻头一阵发酸，我把自己的脸埋在膝盖之间。"
-    me 1 sad "只是一瓶配错了的戊二醛而已……怎么会这样……"
-    
+    "只是一瓶配错了的戊二醛而已……怎么会这样……"
     "按报道来看，事发的直接原因是栗村妇儿医院消毒中心的一位药师，误看了消毒用的戊二醛浓度，导致全院产妇与新生儿爆发了以龟型分枝杆菌为主的混合感染。"
     "仅是一处疏忽，后果竟如此严重。"
     "我难以想象有一百多位像尹青姐一样的产妇遭遇了这样的痛苦。"
@@ -124,7 +122,7 @@ label scene2:
     me 1 sad "要是……我能回到那个时候……把一切都纠正过来……"
     "是不是就能杜绝她们的痛苦了呢？"
     "是不是……还能看见尹青姐的笑容呢？"
-    show duhong1_sad at truecenter with dissolve
+    show duhong1_sad_full at truecenter with dissolve
     "我凄凉地笑了笑。我深知这只是我的奢望。尹青姐的离开是无法扭转的事实。"
     "就没有任何办法了吗……"
     "我靠在自己的双腿上，意识与双眼一起，逐渐模糊。"
@@ -168,7 +166,7 @@ label scene3:
     with Pause(2)
     # （主角：立绘1：疑惑）
     # show duhong confused
-    with dissolve
+    # with dissolve
     "我四下打量，我似乎正身处我毫无印象的地方。"
 
     play music "audio/music/bgm3_back.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
@@ -193,12 +191,12 @@ label scene3:
     man "老杜，你这是咋了？不就睡个懒觉吗，咋还傻了呢？"
     # （主角：立绘2：惊吓）
     # show duhong frightened at left
-    with dissolve
+    # with dissolve
     me 2 shocked "啊？"
     man "我是方岷啊！咱俩是室友啊！今天还得一起去上班啊！"
     # （主角：立绘2：疑惑）
     # show duhong confused at left
-    with dissolve
+    # with dissolve
     me 2 shocked "上班？上什么？"
     fangmin "咱、咱俩不是在栗村院感科上班吗？你别吓我哈？"
 
@@ -220,7 +218,7 @@ label scene3:
 
     # （主角：立绘1：疑惑）
     # show duhong confused at left
-    with dissolve
+    # with dissolve
     me 2 shocked "方岷，今天是几号？"
     # （◎立绘：方岷：疑惑）#居中#
     # show duhong confused at center

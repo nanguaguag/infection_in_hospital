@@ -29,11 +29,9 @@ define config.version = "1.0"
 
 define gui.about = _p("""
 {size=+20}由院感退退队制作{/size}\n
-{a=https://github.com/nanguaguag/infection_in_hospital}Github主页{/a}\n
-{b}游戏制作{/b}：华西口腔医学院 胡宗尧 孙雨萱\n
-{b}剧本{/b}：华西口腔医学院 朱晨西\n
-{b}原画{/b}：艺术学院 张昕睿\n
-{b}推文{/b}：华西口腔医学院 陈星君 钟函育\n
+项目主页: {a=https://github.com/nanguaguag/infection_in_hospital}Github{/a}\n
+开发工具: VScode + Ren'Py Language plugin\n
+许可证: MIT License
 """)
 
 

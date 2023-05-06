@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scene456.rpy", line 125: expected 'image_name_component' not found.
-    show "images/duhong/duhong2_sad.png" at center
-         ^
+File "game/scene789.rpy", line 830: expected statement.
+    "我不由得笑出来的那一刻，眼泪也渐渐积蓄"。
+                          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu May  4 20:31:11 2023
+Sat May  6 20:35:33 2023
