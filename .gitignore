@@ -49,3 +49,13 @@ traceback.txt
 saves/
 
 .DS_Store
+
+*/.DS_Store
+
+errors.txt
+
+log.txt
+
+*.code-workspace
+
+progressive_download.txt

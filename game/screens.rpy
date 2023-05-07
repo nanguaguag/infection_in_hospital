@@ -718,6 +718,12 @@ screen preferences():
                     textbutton _("选项后继续") action Preference("after choices", "toggle")
                     textbutton _("忽略转场") action InvertSelected(Preference("transitions", "toggle"))
 
+                vbox:
+                    style_prefix "radio"
+                    label _("背景")
+                    textbutton _("图像") action SetVariable("ai_bg", False)
+                    textbutton _("AI作图") action SetVariable("ai_bg", True)
+
                 ## 可在此处添加 radio_pref 或 check_pref 类型的额外 vbox，以添加
                 ## 额外的创建者定义的偏好设置。
 

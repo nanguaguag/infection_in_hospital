@@ -43,10 +43,30 @@ image side duhong 2 angry = "images/duhong/duhong2_angry.png"
 image side duhong 2 shocked = "images/duhong/duhong2_shocked.png"
 image side duhong 2 serious = "images/duhong/duhong2_serious.png"
 
+image bg_dormitory_ai = Frame("images/background_ai/dormitory.png", 0, 0)
+image bg_calendar_ai = Frame("images/background_ai/calendar.png", 0, 0)
+image bg_hospital_sanitary_center_ai = Frame("images/background_ai/hospital_sanitary_center.png", 0, 0)
+image bg_office_ai = Frame("images/background_ai/office.png", 0, 0)
+# ai没画
+image bg_office_he_ai = Frame("images/background_ai/office_he.png", 0, 0)
+# ai没画
+image bg_duhong_office_ai = Frame("images/background_ai/duhong_office.png", 0, 0)
+image bg_dinner_hall_day_ai = Frame("images/background_ai/dinner_hall_day.png", 0, 0)
+image bg_room_dark_ai = Frame("images/background_ai/room_dark.png", 0, 0)
+image bg_countryside_ai = Frame("images/background_ai/countryside.png", 0, 0)
+image bg_hospital_hallway_he_ai = Frame("images/background_ai/hospital_hallway_he.png", 0, 0)
+image bg_hospital_hallway_be_ai = Frame("images/background_ai/hospital_hallway_be.png", 0, 0)
+image bg_dean_office_ai = Frame("images/background_ai/dean_office.png", 0, 0)
+image bg_dean_office_be_ai = Frame("images/background_ai/dean_office_be.png", 0, 0)
+
 image bg_dormitory = Frame("images/background/dormitory.png", 0, 0)
 image bg_calendar = Frame("images/background_ai/calendar.png", 0, 0)
 image bg_hospital_sanitary_center = Frame("images/background/hospital_sanitary_center.png", 0, 0)
 image bg_office = Frame("images/background/office.png", 0, 0)
+# ai没画
+image bg_office_he = Frame("images/background/office_he.png", 0, 0)
+# ai没画
+image bg_duhong_office = Frame("images/background/duhong_office.png", 0, 0)
 image bg_dinner_hall_day = Frame("images/background/dinner_hall_day.png", 0, 0)
 image bg_room_dark = Frame("images/background/room_dark.png", 0, 0)
 image bg_countryside = Frame("images/background/countryside.png", 0, 0)
@@ -60,6 +80,7 @@ label splashscreen:
     return
 
 init -2:
+    $ ai_bg = False
     image ctc_blink:
         "gui/syringe.png"
         linear 0.75 alpha 1.0
@@ -81,7 +102,10 @@ label scene1:
 
     # 背景2：餐厅白天
     # （主角：立绘1：笑）
-    scene bg_countryside with fade
+    if ai_bg:
+        scene bg_countryside_ai with fade
+    else:
+        scene bg_countryside with fade
     # show duhong smile at center
     # with dissolve
     "他们都是看着我长大的，对我来说和亲人无异。"
@@ -178,11 +202,11 @@ label scene1:
 
     "我愣了一下。"
     
-    me "走……是指？"
+    me 1 confused "走……是指？"
     
     uncle "……镇上那个栗村妇儿医院，出了一些事情。"
     
-    me "这和栗村妇儿医院……有什么关系？"
+    me 1 confused "这和栗村妇儿医院……有什么关系？"
     
     aunt "小青她当年在栗村妇儿医院生孩子，可是医院出了问题，小青本来身子骨也不硬，就……"
 

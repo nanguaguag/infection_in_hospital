@@ -3,7 +3,10 @@ label scene7:
     # $ renpy.movie_cutscene("images/background/logo.webm")
     # #背景4：医院消毒中心内#
     play music "audio/music/bgm5_enthusiastic.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop if_changed # 音乐继续播放
-    scene bg_hospital_sanitary_center with dissolve
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with dissolve
     # （主角：立绘2：严肃）
     # show duhong serious at left
     # with dissolve
@@ -47,13 +50,18 @@ label scene7:
     fangmin "啊？哦。"
     show fangmin confused at center with dissolve
     me 2 serious "剩下的人，我需要先知道你们对医院感染的了解程度。"
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with dissolve
+    show duhong_smile with dissolve
 
     "我顿了一下，开始提问。"
 
     # （注：以下是杜鸿医生的问答时间，需要考查大家对于医院感染相关知识的了解，你准备好了吗？）
 
     # 【问题4】
-    me 2 serious "问题一，这是送分题——医院工作人员在医院内获得的感染属于院感吗？"
+    me "问题一，这是送分题——医院工作人员在医院内获得的感染属于院感吗？"
 
     menu:
         "属于":
@@ -63,7 +71,7 @@ label scene7:
             "医院工作人员的感染当然也属于院感了……为了尹青姐，打起精神啊。"
 
     # 【问题5】
-    me 2 serious "问题二，院感分为外源感染和内源感染，其中交叉感染是指？"
+    me "问题二，院感分为外源感染和内源感染，其中交叉感染是指？"
 
     menu:
         "内源感染":
@@ -73,7 +81,7 @@ label scene7:
             "没错，外源感染是天然宿主的病原体感染或传递给非天然宿主的现象，是指细菌、病毒、真菌、寄生虫等病原体侵入人体所引起的局部组织和全身性炎症反应。"
 
     # 【问题6】
-    me 2 serious "问题三，在我们栗村妇儿医院，新生儿经胎盘获得的感染属于院感吗？"
+    me "问题三，在我们栗村妇儿医院，新生儿经胎盘获得的感染属于院感吗？"
 
     menu:
         "不属于":
@@ -82,7 +90,7 @@ label scene7:
         "属于":
             "经胎盘感染和医院有什么关系呢？哎，为了尹青姐，打起精神啊。"
 
-    hide fangmin serious with dissolve
+    hide duhong_smile with dissolve
     show panye smile at center with dissolve
     # （◎立绘：潘叶：笑）#居中#
     panye "杜医生，这几个题还挺简单的嘛。"
@@ -161,8 +169,10 @@ label scene7:
     "依稀地，我听到有医生小声嘀咕。"
     
     stop music fadeout 2.0
-
-    scene bg_hospital_sanitary_center with dissolve
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with dissolve
     # （◎立绘：药师）#居左#
     show pharmaceutist
     pharmaceutist "不就是一瓶戊二醛吗，何必闹这么大……"
@@ -198,8 +208,10 @@ label scene7:
     # （主角：立绘2：笑）
     # show duhong2_smile with dissolve
     "我也回了她一个笑容，随即恢复冷脸，望向消毒中心的众位医生。"
-
-    scene bg_hospital_sanitary_center with dissolve
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with dissolve
     # （主角：立绘2：严肃）
     # show duhong serious at left with dissolve
     me 2 serious "潘医生说得很对！但现在改正错误为时不晚。要记得，你们是医生，是更应该珍视生命的一群人。"
@@ -227,8 +239,10 @@ label scene7:
     with pixellate 
     # （◎立绘：尹青（立绘1））#居中#
     yinqing "……小鸿，你要记得，作为一个医生的职责。"
-
-    scene bg_hospital_sanitary_center with pixellate
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with pixellate
     
     "……没错，不是这样的。"
 
@@ -272,7 +286,10 @@ label scene8:
     play music "audio/music/bgm2_tense.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 
 
     # （◎立绘：岳为：严肃）#居中#
-    scene bg_dean_office with dissolve
+    if ai_bg:
+        scene bg_dean_office_ai with dissolve
+    else:
+        scene bg_dean_office with dissolve
     show yuewei serious at center with dissolve
 
     "我在报道上见过他——栗村妇儿医院的院长，岳为。"
@@ -389,7 +406,10 @@ label scene8:
 
 label bad_ending:
     stop music
-    scene bg_dean_office_be with dissolve
+    if ai_bg:
+        scene bg_dean_office_be_ai with dissolve
+    else:
+        scene bg_dean_office_be with dissolve
     "我的一番问话之后，岳为早已无话可说。"
     # （◎立绘：岳为：严肃）#居中#
     show yuewei serious at center with dissolve
@@ -479,8 +499,10 @@ label bad_ending:
     yuewei "嗯。"
 
     "还没等我反应过来，潘叶就把我拉出院长办公室了。"
-
-    scene bg_hospital_hallway_be with dissolve
+    if ai_bg:
+        scene bg_hospital_hallway_be_ai with dissolve
+    else:
+        scene bg_hospital_hallway_be with dissolve
 
     "回去的路上，我始终抑制不住愤恨的怒火。"
 
@@ -677,7 +699,10 @@ label scene9:
     # 第九幕（HE）（BE无该幕）
     $ renpy.movie_cutscene("images/background/logo.webm")
     # #背景6：医院走廊#
-    scene bg_hospital_hallway_he with dissolve
+    if ai_bg:
+        scene bg_hospital_hallway_he_ai with dissolve
+    else:
+        scene bg_hospital_hallway_he with dissolve
     # （主角：立绘2：笑）
     # show duhong smile at left
     # with dissolve
@@ -721,7 +746,7 @@ label scene9:
     "站在门前，我突然停下了动作。"
     "我方才脑海里的东西突然像被敲碎了一样，漂浮在我的脑海里。"
     "就好像突然把我从现实里拖了出去一样，我感觉浑身轻飘飘的。"
-    "我蓦地很清楚的感受到了自己是“穿越者”的实感。"
+    "我忽地很清楚的感受到了自己是“穿越者”的实感。"
     "不久之前备战考研的时光飞涌回我的大脑。"
     "……我本该是一个寻常的大四医学生。"
     "本该和所有大学生一样，为自己的前途而努力、而迷茫。"
@@ -733,7 +758,10 @@ label scene9:
 
     # （主角：立绘2：呆滞）
     # show duhong mindblank with dissolve
-    scene bg_office with dissolve
+    if ai_bg:
+        scene bg_office_he_ai with dissolve
+    else:
+        scene bg_office_he with dissolve
     # （◎立绘：尹青（立绘2：笑））#居中#
     show yinqing smile at center
     "……"
@@ -776,7 +804,7 @@ label scene9:
     with dissolve
     "尹青姐笑了。"
 
-    yinqing "您是小杜医生吧？我在报纸上看到了您的报道，您做了很了不起的事。要不是您，也许我的女儿就不能顺出生了呢。"
+    yinqing "您是小杜医生吧？我在报纸上看到了您的报道，您做了很了不起的事。要不是您，也许我的女儿就不能顺利出生了呢。"
 
     "我害羞地低下头。"
 
@@ -828,6 +856,10 @@ label scene9:
     "——已经不再是小孩子了。"
 
     "我不由得笑出来的那一刻，眼泪也渐渐积蓄。"
+    if ai_bg:
+        scene bg_office_he_ai with dissolve
+    else:
+        scene bg_office_he with dissolve
 
     # （◎立绘：尹青（立绘2：疑惑））#居中#
     show yinqing confused with dissolve
@@ -853,19 +885,19 @@ label scene9:
     # #背景1：全黑#
     scene bg grey with pixellate
     # show duhong young at left with dissolve
-    me 2 serious "尹青姐姐，我长大之后，也要当医生，把你身上的病都治好！"
+    me "尹青姐姐，我长大之后，也要当医生，把你身上的病都治好！"
     show yinqing smile at center with dissolve
     yinqing "好呀，那姐姐就等着小杜医生的好消息咯。"
 
-    me 2 serious "没问题！"
+    me "没问题！"
 
     yinqing "小鸿啊，你一定要记得，作为医生的职责是什么。"
 
-    me 2 serious "职责……就是把所有患者都救回来，对吗？"
+    me "职责……就是把所有患者都救回来，对吗？"
 
     yinqing "……说的没错，但能不能救回来，并不是你所能控制的。"
 
-    me 2 serious "怎么会呢？我就是会把所有人都治好的。"
+    me "怎么会呢？我就是会把所有人都治好的。"
 
     yinqing "……"
 
@@ -876,8 +908,10 @@ label scene9:
     yinqing "无论能力大小，无论困难与否……无论究竟能不能成功。"
 
     yinqing "都要把每位病人的生命当做自己的家人一样，去珍惜，去为他们……着想。"
-
-    scene bg_office with pixellate
+    if ai_bg:
+        scene bg_office_he_ai with dissolve
+    else:
+        scene bg_office_he with pixellate
 
     show yinqing smile with dissolve
 

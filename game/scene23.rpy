@@ -86,7 +86,10 @@ label scene2:
     $ renpy.movie_cutscene("images/background/logo.webm")
     scene bg grey with dissolve
     #背景6：黑暗的房间#
-    scene bg_room_dark with dissolve
+    if ai_bg:
+        scene bg_room_dark_ai with fade
+    else:
+        scene bg_room_dark with dissolve
     # （主角：立绘1：呆滞）
     show duhong1_sad_full at truecenter with dissolve
     "我抱着自己的双膝，窝在外公家逼仄的房间里。"
@@ -139,7 +142,10 @@ label scene3:
     man "……醒醒……杜鸿！……"
     "……似乎有人在……叫我的名字吗？是邻居叔叔吗？"
     # #背景5：双人宿舍内#
-    scene bg_dormitory
+    if ai_bg:
+        scene bg_dormitory_ai
+    else:
+        scene bg_dormitory
     show eye_half_open at eye_blink
     with Pause(2)
     "我头疼欲裂，艰难地睁开双眼。"
@@ -161,7 +167,10 @@ label scene3:
     # show duhong grief
     me 2 shocked "痛死……"
     # *全画面：眨眼特效*
-    scene bg_dormitory
+    if ai_bg:
+        scene bg_dormitory_ai
+    else:
+        scene bg_dormitory
     show eye_half_open at eye_blink
     with Pause(2)
     # （主角：立绘1：疑惑）
@@ -204,7 +213,10 @@ label scene3:
 
     # *对话框震动*
     # （主角：立绘1：惊吓）
-    scene bg_dormitory with fade
+    if ai_bg:
+        scene bg_dormitory_ai with fade
+    else:
+        scene bg_dormitory with fade
     # show duhong scared at left
     with Shake((0.5, 1.0, 0.5, 1.0), 1.0, dist=5)
     # （◎立绘：方岷：吃惊）#居中#

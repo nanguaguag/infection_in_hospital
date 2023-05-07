@@ -14,7 +14,10 @@ label scene4:
     play music "audio/music/bgm3_back.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop if_changed # 音乐继续播放
     # 第四幕
     # $ renpy.movie_cutscene("images/background/logo.webm")
-    scene bg_office with dissolve
+    if ai_bg:
+        scene bg_duhong_office_ai with dissolve
+    else:
+        scene bg_duhong_office with dissolve
     # #背景3：医生办公室内#
    
     # （主角：立绘2：严肃）
@@ -52,7 +55,10 @@ label scene5:
     # 第五幕
     # $ renpy.movie_cutscene("images/background/logo.webm")
     # #背景4：医院消毒中心内#
-    scene bg_hospital_sanitary_center with dissolve
+    if ai_bg:
+        scene bg_hospital_sanitary_center_ai with dissolve
+    else:
+        scene bg_hospital_sanitary_center with dissolve
     # （主角：立绘2：严肃）
     # show duhong serious at left
     with dissolve
@@ -119,7 +125,10 @@ label scene6:
     # 第六幕
     play music "audio/music/bgm4_surprised.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop if_changed
     # $ renpy.movie_cutscene("images/background/logo.webm")
-    scene bg_office with dissolve
+    if ai_bg:
+        scene bg_office_ai with dissolve
+    else:
+        scene bg_office with dissolve
     # #背景3：医生办公室内#
     # （主角：立绘2：悲伤）
     show duhong_sad at center
@@ -147,7 +156,7 @@ label scene6:
     "逐渐地，我仿佛在那片眩晕中看见了一张脸。"
     scene bg grey with dissolve
     # （◎立绘：尹青（立绘1：笑））#居中#
-    show yinqing_smile at center
+    show yinqing smile at center
     with pixellate
     me 2 serious "尹青姐……"
     "尹青姐现在怎么样了呢？她是明天的手术吗？还是后天？"
