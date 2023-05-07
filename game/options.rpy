@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0"
+define config.version = "1.1"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -29,9 +29,9 @@ define config.version = "1.0"
 
 define gui.about = _p("""
 {size=+20}由院感退退队制作{/size}\n
-项目主页: {a=https://github.com/nanguaguag/infection_in_hospital}Github{/a}\n
-开发工具: VScode + Ren'Py Language plugin\n
-许可证: MIT License
+项目主页：{a=https://github.com/nanguaguag/infection_in_hospital}Github{/a}\n
+开发工具：VScode + Ren'Py Language plugin\n
+许可证：MIT License
 """)
 
 
