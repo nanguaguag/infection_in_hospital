@@ -93,6 +93,9 @@ label scene5:
     panye "啊？是，是我做的有什么不好的吗？"
     me 2 serious "不不不，就是一个常规检查，没有针对你的意思——"
     "她这副态度把我都整不安了。说实话，我本来想劈头骂她一顿的。"
+
+    scene bg grey with dissolve
+
     "我把她配出的、将应用于明天手术的戊二醛溶液带去了化验科。不一会儿，令我大跌眼镜的结果就出来了。"
 
     play music "audio/music/bgm4_surprised.mp3" fadein 1.0 fadeout 2.0 volume 0.5 loop 

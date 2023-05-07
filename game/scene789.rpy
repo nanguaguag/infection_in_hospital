@@ -48,7 +48,8 @@ label scene7:
     hide panye confused with dissolve
     show fangmin shocked at center with dissolve
     fangmin "啊？哦。"
-    show fangmin confused at center with dissolve
+    # 这个地方方岷的前一个立绘是惊讶，感觉下一个变成疑惑有点怪
+    # show fangmin confused at center with dissolve
     me 2 serious "剩下的人，我需要先知道你们对医院感染的了解程度。"
     if ai_bg:
         scene bg_hospital_sanitary_center_ai with dissolve
@@ -563,7 +564,14 @@ label bad_ending:
     "我也只能在痛苦的悔恨中、在九年前的时空里，度过余生。"
 
     stop music fadeout 5.0
-    scene bg black with Dissolve(5)
+
+    scene bg grey with dissolve
+    show text "{size=+35}{color=#90EE90}{b}—The End—{/b]/color}{/size}"
+    with Dissolve(4.0)
+    scene bg grey with dissolve
+    show text "{size=30}{color=#FFF}若要开启Happy Ending，请再次尝试{/color}{/size}"
+    with Dissolve(4.0)
+    scene bg black with dissolve
 
     $ renpy.movie_cutscene("images/background/logo.webm")
 
@@ -931,9 +939,13 @@ label scene9:
 
     stop music fadeout 2.0
 
-    scene bg grey
+    scene bg grey with dissolve
     show text "{size=+35}{color=#90EE90}{b}—The End—{/b]/color}{/size}"
     with Dissolve(4.0)
+    scene bg grey with dissolve
+    show text "{color=#FFF}若要开启Bad Ending，请再次尝试\n如要了解更多院感知识，请移步{a=https://b.xiumi.us/board/v5/67soT/449905151}推文{/a}{/color}"
+    with dissolve
+    pause 5.0 # 暂停5秒
     scene bg black with dissolve
 
     $ renpy.movie_cutscene("images/background/logo.webm")

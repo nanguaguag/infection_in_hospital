@@ -31,7 +31,8 @@ define gui.about = _p("""
 {size=+20}由院感退退队制作{/size}\n
 项目主页：{a=https://github.com/nanguaguag/infection_in_hospital}Github{/a}\n
 开发工具：VScode + Ren'Py Language plugin\n
-许可证：MIT License
+许可证：MIT License\n
+游戏推文：{a=https://v.xiumi.us/board/v5/67soT/449905151}链接{/a}\n
 """)
 
 
